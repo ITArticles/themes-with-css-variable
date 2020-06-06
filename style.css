@@ -1,0 +1,241 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root,
+[data-theme="blue"] {
+    --color1: #edf4fb;
+    --color2: #c2dbf0;
+    --color3: #85b7e2;
+    --color4: #4992d3;
+    --color5: #296ca8;
+    --color6: #1a456b;
+    --color7: #153755;
+    --color8: #102940;
+    --ff: 'Roboto Condensed';
+}
+
+[data-theme="violet"] {
+    --color1: #e1ddea;
+    --color2: #c3bcd6;
+    --color3: #a59ac1;
+    --color4: #8879ad;
+    --color5: #6b5b95;
+    --color6: #615286;
+    --color7: #4b4068;
+    --color8: #362e4a;
+    --ff: Tahoma;    
+}
+
+[data-theme="pink"] {
+    --color1: #f2e3ed;
+    --color2: #e4c6db;
+    --color3: #c98db6;
+    --color4: #bc70a4;
+    --color5: #b25c97;
+    --color6: #a44d88;
+    --color7: #8f4377;
+    --color8: #663055;
+    --ff: Cambria;    
+}
+
+.main {
+    font-family: var(--ff);
+    font-size: 20px;
+    background: var(--color1);
+    color: white;
+}
+
+.navigator {
+    list-style: none;
+    background-color: var(--color5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    z-index: 99999999;
+    font-size: 0px;
+}
+
+.navigator li {
+    font-size: 20px;
+    display: inline-block;
+}
+
+.navigator li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 15px 20px;
+    display: inline-block;
+    transition: all 0.4s;
+    transform: scale(0.96);
+}
+
+.navigator li a:hover {
+    background-color: var(--color6);
+    transform: scale(1);
+}
+
+.navigator li.search {
+    float: right;
+    padding: 10px 20px;
+}
+
+.navigator li.search input {
+    padding: 8px 10px;
+    border-radius: 5px;
+    width: 45px;
+    background-color: white;
+    border: 1px solid var(--color2);
+    transition: all 0.4s;
+    font-style: italic;
+}
+
+.navigator li.search input:focus {
+    width: 130px;
+    font-style: normal;
+}
+
+.container {
+    position: relative;
+    top: 55px;
+}
+
+.section {
+    margin: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+    box-sizing: border-box;
+}
+
+.section>.part {
+    display: inline-block;
+    position: relative;
+}
+
+.part.watch {
+    background: var(--color2);
+    color: var(--color7);
+}
+
+.part .time {
+    text-align: center;
+    font-size: 35px;
+    display: block;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    left: 50%;
+}
+
+.c-time {
+    display: inline-block;
+}
+
+.part .time .c-day {
+    font-size: 20px;
+}
+
+.part ul.disk-list {
+    list-style: none;
+}
+
+.part ul.disk-list li {
+    position: relative;
+}
+
+.part ul.disk-list li a {
+    padding: 15px;
+    padding-left: 50px;
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.part ul.disk-list li a:before {
+    height: 18px;
+    width: 18px;
+    content: ' ';
+    display: inline-block;
+    border-radius: 10px;
+    left: 15px;
+    border: 1px solid white;
+    position: absolute;
+}
+
+
+.part ul.disk-list.dark-first li:nth-child(2n),
+.part ul.disk-list.light-first li:nth-child(2n+1) {
+    background: var(--color3);
+}
+
+.part ul.disk-list.dark-first li:nth-child(2n+1),
+.part ul.disk-list.light-first li:nth-child(2n) {
+    background: var(--color5);
+}
+
+.alert {
+    margin: 10px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background: var(--color3);
+    color: white;
+    position: relative;
+}
+
+.alert.primary {
+    background: var(--color6);
+}
+
+.btn {
+    border: 1px solid transparent;
+    background: var(--color2);
+    border-radius: 3px;
+    padding: 7px 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--ff);
+}
+
+.btn:hover,
+.btn:focus,
+.btn.active {
+    background: var(--color1);
+    opacity: 1;
+}
+
+.btn.primary {
+    color: white;
+    background-color: var(--color7);
+}
+
+.theme-switch{
+    background: var(--color7);
+    top: -3px;
+    position: relative;
+    padding: 5px;
+    color: white;
+}
+.theme-switch option{    
+    padding: 5px;
+}

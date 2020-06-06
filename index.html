@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme with CSS Variables</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+</head>
+<body class="main">
+    <ul class="navigator">
+        <li>
+            <a href="#Home">Home</a>
+        </li>
+        <li>
+            <a href="#About">About</a>
+        </li>
+        <li>
+            <a href="#Contact">Contact</a>
+        </li>
+        <li class="search">
+            <input type="text" placeholder="Search">
+        </li>
+    </ul>
+    <div class="container">
+        <div class="section">
+            <div class="part watch">
+                <div class="time">
+                    <span class="c-time">12:00:00 AM</span>
+                    <span class="c-day">Sunday, Jan 01</span>
+                </div>
+            </div>
+            <div class="part">
+                <ul class="disk-list dark-first">
+                    <li>
+                        <a href="#list1">Local and Session Storage in Javascript</a>
+                    </li>
+                    <li>
+                        <a href="#list2">Cookies in HTML and Javascript</a>
+                    </li>
+                    <li>
+                        <a href="#list1">Cookies vs Web Storage</a>
+                    </li>
+                    <li>
+                        <a href="#list1">Whats Console API?</a>
+                    </li>
+                    <li>
+                        <a href="#list2">Console Timer - time a fn() took?</a>
+                    </li>
+                    <li>
+                        <a href="#list2">Console Table - Display array as Table</a>
+                    </li>
+                    <li>
+                        <a href="#list2">Style your Console Log</a>
+                    </li>                    
+                </ul>
+            </div>
+            <div class="part">
+                <ul class="disk-list light-first">
+                    <li>
+                        <a href="#list1">CSS TextShadow for 3D Look</a>
+                    </li>
+                    <li>
+                        <a href="#list2">use variables in CSS(No JS)</a>
+                    </li>
+                    <li>
+                        <a href="#list3">Animation in CSS3 without Javascript</a>
+                    </li>
+                    <li>
+                        <a href="#list4">CSS Cool Animation Effect</a>
+                    </li>
+                    <li>
+                        <a href="#list1">CSS Glowing Text and Animations</a>
+                    </li>
+                    <li>
+                        <a href="#list2">Newspaper style - without Grid or Flex</a>
+                    </li>
+                    <li>
+                        <a href="#list2">Fixed Auto Expand Menu only CSS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="alert">
+            This is default alert box for current theme.
+        </div>
+        <div class="alert primary">
+            This is primary alert box for current theme.                     
+        </div>
+        <div class="alert">
+            Button:
+            <input type="button" class="btn" value="Default">  
+            <input type="button" class="btn primary" value="Primary">
+            <label style="float: right;cursor: pointer;">Themes?
+                <select class="theme-switch">
+                    <option value="blue">Blue</option>
+                    <option value="pink">Pink</option>
+                    <option value="violet">Violet</option>
+                </select>
+            </label> 
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
